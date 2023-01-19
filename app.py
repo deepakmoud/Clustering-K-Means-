@@ -7,13 +7,13 @@ Created on Fri Mar 26 12:38:32 2021
 
 import numpy as np
 from flask import Flask, request, jsonify, render_template
-
+from flask_ngrok import run_with_ngrok
 import pickle
 
 
 app = Flask(__name__)
-model = pickle.load(open('linearregression.pkl','rb')) 
-
+model = pickle.load(open('/content/drive/My Drive/linearregression.pkl','rb')) 
+run_with_ngrok(app)
 
 @app.route('/')
 def home():
@@ -24,16 +24,18 @@ def home():
 def predict():
     
     
-    
     '''
     For rendering results on HTML GUI
     '''
     exp = float(request.args.get('exp'))
     
-    prediction = model.predict([[exp]])
+    prediction =int(model.predict([[exp]]))
     
         
-    return render_template('index.html', prediction_text='Regression Model  has predicted salary for given experinace is : {}'.format(prediction))
+    return render_template('index.html', prediction_text='Regression Model  has predicted salary for given experinace is Rs.  : {}'.format(prediction))
+
+
+
 
 
 if __name__ == "__main__":
