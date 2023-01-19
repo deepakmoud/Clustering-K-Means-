@@ -2,13 +2,13 @@
 <html >
 <!--From https://codepen.io/frytyler/pen/EGdtg-->
 <head>
-<title>Machine Learning Lab Experiment Deployment</title>
+<title>Machine Learning  Linear Regression Deployment</title>
 <meta charset="UTF-8">
-<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+
 <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous"> 
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous"> 
 <style><!DOCTYPE html>
 
 h1 {text-align: center;}
@@ -20,33 +20,34 @@ div {text-align: center;}
 </head>
 
 <body>
- 
-     
-<div class="" style="background-color:blue;" >
+      
+<div class="" style="background-color:grey;" >
 <div class="clearfix">
            
 <div class="col-md-12">
 <center><p style="font-size:40px;color:white;margin-top:10px;">Poornima Institute of Engineering & Technology</p></center> 
 <center><p style="font-size:30px;color:white;margin-top:10px;">Department of Computer Engineering</p></center> 
-<center><p style="font-size:25px;color:white;margin-top:10px;">Machine Learning Experiment Deployment</p></center> 
+<center><p style="font-size:25px;color:white;margin-top:10px;">Six Days ​Faculty development Program on ​ ​Applications of Neural Network and Machine learning Jaipur, India | ​19 J​an​​ - ​25 Jan</p></center> 
 </div>
 </div>
 </div>
 
 <div class="login">
-<h2 >Regression Analysis to predict salary on the basis Experiance</h2>
-<h4>Developed by Deepak Moud</h4>
+<h2 >Linear Regression for salary Prediction </h2>
+
 <!-- Main Input For Receiving Query to our ML -->
 <form action="{{ url_for('predict')}}"method="get">
-<div class="form-floating mb-3">
 
-<input type="number" class="form-control" id="exp" name="exp" step="any" min="0" max="100" placeholder="0" required="required">
-<label for="floatingInput">Enter experince in years</label>
+<div class="form-floating mb-3">
+<input type="number" class="form-control" id="exp" name="exp" placeholder="Experiance in years" min="1" max="100" required="required" />
+<label for="floatingInput">Enter Experiance in Years</label>
 </div>
 <br>
 
 <br>
-<button type="submit" class="btn btn-primary btn-block btn-large">Predict salary for Given Experinace</button>
+<button type="submit" class="btn btn-primary btn-block btn-large">Predict salary</button>
+<br>
+
 </form>
 <br>
 <br>
@@ -54,11 +55,12 @@ div {text-align: center;}
 
 </div>
 
-<div class="" style="background-color:blue;" >
+<div class="" style="background-color:orange;" >
 <div class="clearfix">
            
 <div class="col-md-12">
- <center><p style="font-size:25px;color:white;margin-top:20px;">Machine Learning  Experiment </p></center> 
+ <center><p style="font-size:25px;color:white;margin-top:20px;">Experiment Performed on Day 2 of FDP </p></center>
+ <center><p style="font-size:25px;color:white;margin-top:20px;">Developed by Deepak Moud </p></center>  
 </div>
 </div>
 </div>
