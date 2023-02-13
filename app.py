@@ -1,19 +1,18 @@
-!pip install flask-ngrok
 import numpy as np
 from flask import Flask, request, jsonify, render_template
-from flask_ngrok import run_with_ngrok
+
 import pickle
 
 
 app = Flask(__name__)
-model = pickle.load(open('/content/drive/My Drive/kmeanscluster.pkl','rb'))   
-run_with_ngrok(app)
+model = pickle.load(open('/home/clusteringapp/Clustering-K-Means-/kmeanscluster.pkl','rb'))
+
 
 @app.route('/')
 def home():
-  
+
     return render_template("index.html")
-  
+
 @app.route('/predict',methods=['GET'])
 def predict():
   '''
@@ -21,8 +20,8 @@ def predict():
   '''
   income = int(request.args.get('income'))
   score = int(request.args.get('score'))
-    
-    
+
+
   predict = model.predict([[income,score ]])
   if predict==[0]:
     result="Customer is careless"
@@ -36,8 +35,8 @@ def predict():
 
   else:
     result="Custmor is sensible"
-    
-        
+
+
   return render_template('index.html', prediction_text='Model  has predicted  : {}'.format(result))
 
 
